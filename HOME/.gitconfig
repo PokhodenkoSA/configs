@@ -1,0 +1,22 @@
+[core]
+	excludesfile = /Users/sergey/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Sergey POKHODENKO
+	email = pokhodenko.s.a@gmail.com
+[alias]
+	cm = commit
+	st = status
+	br = branch
+	co = checkout
+	lg = log --graph --pretty='format:%C(yellow)%h %Cgreen%an%Creset %s'
+	lg1 = log --graph --pretty='format:%C(yellow)%h %Cgreen%an%Creset %s' --name-status
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
